@@ -1,4 +1,3 @@
-
 name: Deploy Flask Docker App to EC2
 
 on:
@@ -31,7 +30,7 @@ jobs:
 
           sudo docker rm -f flask-app || true
           
-          sudo docker pull ${{ secrets.DOCKER_USERNAME }}/flask-app1:latest
+          sudo docker pull ${{ secrets.DOCKER_USERNAME }}/flask-app:latest
           
-          sudo docker run -d -p 80:5000 --name flask-app ${{ secrets.DOCKER_USERNAME }}/flask-app1:latest
+          sudo docker run -d -p 80:5000 --name flask-app ${{ secrets.DOCKER_USERNAME }}/flask-app:latest
         EOF
