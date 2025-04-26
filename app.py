@@ -25,8 +25,13 @@ def home():
                 <input type="text" name="num2" class="form-control" required>
               </div>
               <div class="mb-3">
-                <label class="form-label">Operation (+, -, *, /):</label>
-                <input type="text" name="op" class="form-control" required>
+                <label class="form-label">Operation:</label>
+                <select name="op" class="form-select" required>
+                  <option value="+">Addition (+)</option>
+                  <option value="-">Subtraction (-)</option>
+                  <option value="*">Multiplication (*)</option>
+                  <option value="/">Division (/)</option>
+                </select>
               </div>
               <div class="text-center">
                 <button type="submit" class="btn btn-primary">Calculate</button>
